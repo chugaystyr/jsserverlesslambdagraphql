@@ -27,6 +27,9 @@ const applications = [
   {id: 2,
     name: "Netflix"
   },
+  {id: 3,
+    name: "Facebook"
+  },
 ];
 
 //Resolvers part
@@ -34,7 +37,6 @@ const resolvers = {
   Query: {
     application: (parent,args) => {
         const appid = parseInt(args.id);
-        //Just get it from mocked array
         return find(applications, {id: appid});
     }
   }
